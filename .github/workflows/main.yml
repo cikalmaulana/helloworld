@@ -1,8 +1,8 @@
 name: Publish Docker image
 on:
   push:
-    branches: ['main']
-j
+    branches: ["main"]
+
 obs:
   push_to_registry:
     name: Push Docker image to Docker Hub
@@ -27,4 +27,4 @@ obs:
           context: .
           push: true
           tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }} 
+          labels: ${{ steps.meta.outputs.labels }}
